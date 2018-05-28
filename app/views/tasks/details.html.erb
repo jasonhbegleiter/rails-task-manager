@@ -1,0 +1,11 @@
+<h1>View the details!</h1>
+
+
+<div class="container">
+  <%= link_to "Go Back To List", list_path %> <br> <br>
+  <div class="details">
+    <%= @task.title %> <br>
+    <%= @task.details %> <br>
+    <%= @task.completed %>
+  </div>
+</div>

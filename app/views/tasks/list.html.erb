@@ -5,9 +5,10 @@
     <ul>
       <% @tasks.each do |task| %>
       <li>
-        <%= task.title %> <br>
-        <%= task.details %> <br>
-        <%= task.completed %>
+        <%= link_to task.title, details_path(task) %> <br>
+        <!-- <%= task.title %> <br> -->
+        <!-- <%= task.details %> <br> -->
+        Completed: <%= task.completed %>
       </li>
       <% end %>
     </ul>
