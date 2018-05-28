@@ -1,0 +1,15 @@
+<h1>View all of your wonderful tasks!</h1>
+
+<div class="container">
+  <div class="tasks">
+    <ul>
+      <% @tasks.each do |task| %>
+      <li>
+        <%= task.title %> <br>
+        <%= task.details %> <br>
+        <%= task.completed %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
