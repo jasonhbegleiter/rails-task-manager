@@ -3,9 +3,11 @@
 
 <div class="container">
   <%= link_to "Go Back To List", list_path %> <br> <br>
+  <hr />
   <div class="details">
     <%= @task.title %> <br>
     <%= @task.details %> <br>
-    <%= @task.completed %>
+    <%= @task.completed %> <br>
+    <%= link_to "Update this task", edit_path(@task) %>
   </div>
 </div>

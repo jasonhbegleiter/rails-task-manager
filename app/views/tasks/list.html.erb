@@ -4,16 +4,20 @@
   <div class="new">
     <%= link_to "Create a new task", new_path %>
   </div>
+  <hr />
   <div class="tasks">
     <ul>
       <% @tasks.each do |task| %>
       <li>
         <%= link_to task.title, details_path(task) %> <br>
-        <!-- <%= task.title %> <br> -->
-        <!-- <%= task.details %> <br> -->
         Completed: <%= task.completed %>
+        <%= link_to "delete", delete_path(task),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
       </li>
       <% end %>
     </ul>
   </div>
 </div>
+
+
