@@ -1,6 +1,9 @@
 <h1>View all of your wonderful tasks!</h1>
 
 <div class="container">
+  <div class="new">
+    <%= link_to "Create a new task", new_path %>
+  </div>
   <div class="tasks">
     <ul>
       <% @tasks.each do |task| %>
